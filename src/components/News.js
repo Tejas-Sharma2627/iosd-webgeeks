@@ -36,7 +36,7 @@ const News = (props) => {
     return (
         <>
         <div className="container my-3 ">
-          <h1 style={{marginTop: '70px',marginBottom: '20px',marginLeft:'20px'}}>Health Headlines</h1>
+          <h1 id="heading" style={{marginTop: '70px',marginBottom: '20px',marginLeft:'20px'}}>Health Headlines</h1>
 
           <InfiniteScroll
             dataLength={articles.length}
