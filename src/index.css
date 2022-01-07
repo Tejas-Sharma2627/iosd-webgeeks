@@ -21,3 +21,6 @@ code {
 body{
   font-family: 'PT Serif', serif;
 }
+#heading{
+  text-align: center;
+}
