@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            News-Hub
+            News-Hub <span class="badge bg-secondary">News</span>
           </a>
           <button
             className="navbar-toggler"
@@ -26,14 +26,14 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/"? "active": ""}`} to="/">
-                  Health
+                  Health-news
                 </Link>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/about"? "active": ""}`} to="/about">
-                  About
+                  About Us
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>

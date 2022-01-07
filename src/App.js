@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import News from "./components/News";
 import LoadingBar from "react-top-loading-bar";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -25,7 +27,11 @@ function App() {
           <Route exact path="/">
             <News setprogressbar ={setProgress} key="health" category="health"/>
           </Route>
+          <Route exact path="/about">
+            <About/>
+          </Route>
         </Switch>
+        <Footer/>
       </Router>
     </>
   );

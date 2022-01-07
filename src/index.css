@@ -6,8 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#readmore:hover{
+  background-color: black;
+  color: white;
+}
+#readmore{
+  border: 2px solid black;
+}
+body{
+  font-family: 'PT Serif', serif;
 }

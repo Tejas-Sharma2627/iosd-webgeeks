@@ -12,7 +12,7 @@ const Newsitem = (props) => {
             <p className="card-text">
               {description}...<br/><br/>Author: {author === null?"Anonymous":author}
             </p>
-            <a rel ="noopener noreferrer" href={newsurl} target="_blank" className="btn btn-dark btn-sm">
+            <a rel ="noopener noreferrer" href={newsurl} target="_blank" className="btn btn-light btn-sm" id='readmore'>
               Read More
             </a> 
           </div>
