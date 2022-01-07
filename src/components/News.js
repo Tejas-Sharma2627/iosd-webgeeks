@@ -11,6 +11,7 @@ const News = (props) => {
 
   const { setprogressbar, category} = props;
    useEffect(async () => {
+     document.title = "Health-news";
     setprogressbar(10);
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=7f50577e05c84ae086b154b4659aadb1&page=1&pageSize=16`;
     let data = await fetch(url);
@@ -35,7 +36,7 @@ const News = (props) => {
     return (
         <>
         <div className="container my-3 ">
-          <h1 style={{marginTop: '70px',marginBottom: '20px',marginLeft:'20px'}}>News-Hub Headlines</h1>
+          <h1 style={{marginTop: '70px',marginBottom: '20px',marginLeft:'20px'}}>Health Headlines</h1>
 
           <InfiniteScroll
             dataLength={articles.length}
@@ -60,7 +61,6 @@ const News = (props) => {
                 })}
             </div>
           </InfiniteScroll>
-          <hr />
         </div>
       </>
     );
