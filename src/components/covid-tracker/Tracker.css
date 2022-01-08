@@ -6,3 +6,22 @@ body {
   background-color: #f5f6fa;
 }
 
+.left-part {
+  flex: 0.9;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.header > h1 {
+  color: #fc3c3c;
+  font-size: 2rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}

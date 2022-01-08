@@ -6,7 +6,7 @@ import { useState } from "react";
 import News from "./components/News";
 import LoadingBar from "react-top-loading-bar";
 import About from "./components/About";
-
+import Tracker from "./components/covid-tracker/Tracker";
 
 function App() {
   const [progressbar, setprogressbar] = useState(0);
@@ -30,7 +30,7 @@ function App() {
             <About/>
           </Route>
           <Route exact path="/covid-tracker">
-            
+            <Tracker/>
           </Route>
         </Switch>
       </Router>
