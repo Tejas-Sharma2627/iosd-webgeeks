@@ -10,12 +10,12 @@ const About = () => {
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingOne">
       <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        About News-Hub
+        About CoviNews & Tracker
       </button>
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-        News-hub is an API based app made using React JS which fetches you latest news related to health from all over the world
+      CoviNews & Tracker is an API based app made using React JS which fetches you latest news related to health from all over the world
       </div>
     </div>
   </div>

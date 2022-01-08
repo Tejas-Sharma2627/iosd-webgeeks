@@ -1,16 +1,18 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import "./styles.css";
 
 const Navbar = () => {
     const location = useLocation();
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div >
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            News-Hub <span class="badge bg-secondary">News</span>
+            CoviNews & Tracker
           </a>
+          
           <button
             className="navbar-toggler"
             type="button"

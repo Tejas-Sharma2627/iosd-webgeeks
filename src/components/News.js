@@ -3,6 +3,7 @@ import Newsitem from "./Newsitem";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useState , useEffect} from "react";
 import Spinner from "./Spinner";
+import Footer from "./Footer/Footer";
 const News = (props) => {
     const [articles, setarticles] = useState([]);
   const [totalcards, settotalcards] = useState([]);
@@ -62,6 +63,7 @@ const News = (props) => {
             </div>
           </InfiniteScroll>
         </div>
+        <Footer/>
       </>
     );
 }
