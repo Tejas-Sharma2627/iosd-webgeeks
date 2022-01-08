@@ -36,6 +36,11 @@ const Navbar = () => {
                   About Us
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/about"? "active": ""}`} to="/covid-tracker">
+                  Covid Tracker
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
