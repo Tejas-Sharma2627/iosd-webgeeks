@@ -29,6 +29,9 @@ function App() {
           <Route exact path="/about">
             <About/>
           </Route>
+          <Route exact path="/covid-tracker">
+            
+          </Route>
         </Switch>
       </Router>
     </>
