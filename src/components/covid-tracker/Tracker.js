@@ -11,10 +11,11 @@ import InfoBox from "./InfoBox";
 import LineGraph from "./LineGraph";
 import Table from "./Table";
 import { sortData, prettyPrintStat } from "./util";
+import Footer from "../Footer/Footer";
 import numeral from "numeral";
 import "leaflet/dist/leaflet.css";
 
-const App = () => {
+const Tracker = () => {
   const [country, setInputCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [countries, setCountries] = useState([]);
@@ -119,8 +120,9 @@ const App = () => {
           </div>
         </CardContent>
       </Card>
+      <Footer></Footer>
     </div>
   );
 };
 
-export default App;
+export default Tracker;
