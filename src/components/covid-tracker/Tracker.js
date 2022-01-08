@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Tracker.css";
-import Footer from "../Footer/Footer";
-import InfoBox from "./InfoBox";
 import {
   MenuItem,
   FormControl,
@@ -9,14 +7,17 @@ import {
   Card,
   CardContent,
 } from "@material-ui/core";
+import InfoBox from "./InfoBox";
+import LineGraph from "./LineGraph";
+import Table from "./Table";
 import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
+import "leaflet/dist/leaflet.css";
 
-const Tracker = () => {
+const App = () => {
   const [country, setInputCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [countries, setCountries] = useState([]);
-  const [mapCountries, setMapCountries] = useState([]);
   const [tableData, setTableData] = useState([]);
   const [casesType, setCasesType] = useState("cases");
 
@@ -37,8 +38,9 @@ const Tracker = () => {
             name: country.country,
             value: country.countryInfo.iso2,
           }));
-
+          let sortedData = sortData(data);
           setCountries(countries);
+          setTableData(sortedData);
         });
     };
 
@@ -46,6 +48,7 @@ const Tracker = () => {
   }, []);
 
   console.log(casesType);
+
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
 
@@ -60,12 +63,13 @@ const Tracker = () => {
         setCountryInfo(data);
       });
   };
+
   return (
     <div className="tracker">
-      <div className="left-part">
+      <div className="left">
         <div className="header">
           <h1>COVID-19 Tracker</h1>
-          <FormControl className="app__dropdown">
+          <FormControl className="dropdown">
             <Select
               variant="outlined"
               value={country}
@@ -103,10 +107,20 @@ const Tracker = () => {
             total={numeral(countryInfo.deaths).format("0.0a")}
           />
         </div>
+  
       </div>
-      <Footer />
+      <Card className="right">
+        <CardContent>
+          <div className="information">
+            <h3>Live Cases by Country</h3>
+            <Table countries={tableData} />
+            <h3>Worldwide new {casesType}</h3>
+            <LineGraph casesType={casesType} />
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };
 
-export default Tracker;
+export default App;

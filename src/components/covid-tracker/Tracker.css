@@ -6,7 +6,7 @@ body {
   background-color: #f5f6fa;
 }
 
-.left-part {
+.left {
   flex: 0.9;
 }
 .header {
@@ -24,4 +24,25 @@ body {
 .stats {
   display: flex;
   justify-content: space-between;
+}
+
+.dropdown {
+  background-color: white;
+}
+
+.information > h3 {
+  color: #6a5d5d;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.information > h3:last-of-type {
+  margin-top: 1rem;
+}
+
+@media (max-width: 990px) {
+  .tracker {
+    flex-direction: column;
+  }
 }
