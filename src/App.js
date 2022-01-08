@@ -1,12 +1,11 @@
 import "./App.css";
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import News from "./components/News";
 import LoadingBar from "react-top-loading-bar";
 import About from "./components/About";
-import Footer from "./components/Footer";
 
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
             <About/>
           </Route>
         </Switch>
-        <Footer/>
       </Router>
     </>
   );
