@@ -16,7 +16,7 @@ const About = () => {
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-      CoviNews & Tracker is an API based app made using React JS which fetches you latest news related to health from all over the world
+     <strong>CoviNews & Tracker </strong>is an API based app made using React JS which fetches you latest news related to health from all over the world. It also comes with a tracker which lets you see corona cases from all over the world.
       </div>
     </div>
   </div>
@@ -28,7 +28,8 @@ const About = () => {
     </h2>
     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-        <strong>Covid Tracker</strong> Covid tracker is using pacakges, leaflet for Map, Material Ui for styled components, numeral for number formating and react-chartjs2 for the graph.
+        <strong>CoviNews & Tracker</strong> This app is using fetch API to fetch latest news related to health from all over the world on a single click. It is using components made by us as well as from material UI. It uses packages like- leaflet for map, numeral for number formatting, react-chartjs2 for graph, react-router-dom to create routes in navbar, react-infinite-scroll package to create an infinte scroll bar for news component<br />
+    
       </div>
     </div>
   </div>
@@ -43,7 +44,7 @@ const About = () => {
         <strong>Kshitiz Singh Chauhan<br/>
         Tejas Sharma <br />
         Harsh <br />
-        Ritik <br /></strong> 
+        Ritik Panchal <br /></strong> 
       </div>
     </div>
   </div>
