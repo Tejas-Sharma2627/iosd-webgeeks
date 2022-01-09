@@ -14,6 +14,7 @@ import { sortData, prettyPrintStat } from "./util";
 import Footer from "../Footer/Footer";
 import numeral from "numeral";
 import "leaflet/dist/leaflet.css";
+import Map from "./Map";
 
 const Tracker = () => {
   const [country, setInputCountry] = useState("worldwide");
@@ -21,7 +22,9 @@ const Tracker = () => {
   const [countries, setCountries] = useState([]);
   const [tableData, setTableData] = useState([]);
   const [casesType, setCasesType] = useState("cases");
-
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapZoom, setMapZoom] = useState(3);
+  const [mapCountries, setMapCountries] = useState([]);
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
       .then((response) => response.json())
@@ -41,6 +44,7 @@ const Tracker = () => {
           }));
           let sortedData = sortData(data);
           setCountries(countries);
+          setMapCountries(data);
           setTableData(sortedData);
         });
     };
@@ -62,6 +66,8 @@ const Tracker = () => {
       .then((data) => {
         setInputCountry(countryCode);
         setCountryInfo(data);
+        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        setMapZoom(4);
       });
   };
 
@@ -108,7 +114,12 @@ const Tracker = () => {
             total={numeral(countryInfo.deaths).format("0.0a")}
           />
         </div>
-  
+        <Map
+          countries={mapCountries}
+          casesType={casesType}
+          center={mapCenter}
+          zoom={mapZoom}
+        />
       </div>
       <Card className="right">
         <CardContent>
