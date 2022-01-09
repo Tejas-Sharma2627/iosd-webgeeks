@@ -17,7 +17,8 @@ body {
 }
 
 .header > h1 {
-  color: #fc3c3c;
+  font-weight: 700;
+  color: #02111f;
   font-size: 2rem;
 }
 

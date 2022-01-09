@@ -11,15 +11,15 @@
 }
 
 .infoBox--red {
-  border-color: red;
+  border-color: #fd4e5a;
 }
 
 .infoBox__cases--green {
-  color: lightgreen !important;
+  color: #1a9949 !important;
 }
 
 .infoBox__cases {
-  color: #cc1034;
+  color: #F90716;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 0.5rem;

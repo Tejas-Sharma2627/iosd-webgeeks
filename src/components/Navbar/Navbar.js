@@ -32,13 +32,13 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/about"? "active": ""}`} to="/about">
-                  About Us
+                <Link className={`nav-link ${location.pathname === "/covid-tracker"? "active": ""}`} to="/covid-tracker">
+                  Covid Tracker
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/covid-tracker"? "active": ""}`} to="/covid-tracker">
-                  Covid Tracker
+                <Link className={`nav-link ${location.pathname === "/about"? "active": ""}`} to="/about">
+                  About Us
                 </Link>
               </li>
             </ul>
