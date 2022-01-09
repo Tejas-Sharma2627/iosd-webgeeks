@@ -12,7 +12,7 @@ const News = (props) => {
 
   const { setprogressbar, category} = props;
    useEffect(async () => {
-     document.title = "Health-news";
+     document.title = "CoviNews & Tracker";
     setprogressbar(10);
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=7f50577e05c84ae086b154b4659aadb1&page=1&pageSize=16`;
     let data = await fetch(url);

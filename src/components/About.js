@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Footer from './Footer/Footer'
 const About = () => {
     useEffect(() => {
-        document.title = "About us"
+        document.title = "CoviNews & Tracker"
     }, [])
     return (<>
         <div className='container my-4'>
