@@ -1,10 +1,11 @@
 import React from 'react'
 import { useEffect } from 'react'
+import Footer from './Footer/Footer'
 const About = () => {
     useEffect(() => {
         document.title = "About us"
     }, [])
-    return (
+    return (<>
         <div className='container my-4'>
             <div className="accordion" id="accordionExample">
   <div className="accordion-item">
@@ -22,29 +23,34 @@ const About = () => {
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingTwo">
       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
+        Packages used 
       </button>
     </h2>
     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <strong>Covid Tracker</strong> Covid tracker is using pacakges, leaflet for Map, Material Ui for styled components, numeral for number formating and react-chartjs2 for the graph.
       </div>
     </div>
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingThree">
       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+        Made By Team Webgeeks
       </button>
     </h2>
     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <strong>Kshitiz Singh Chauhan<br/>
+        Tejas Sharma <br />
+        Harsh <br />
+        Ritik <br /></strong> 
       </div>
     </div>
   </div>
 </div>
+
         </div>
+        <Footer/></>
     )
 }
 
